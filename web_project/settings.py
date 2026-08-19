@@ -28,7 +28,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -65,7 +65,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'web_project.urls'
-CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+]
 
 TEMPLATES = [
     {
